@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>IRAA Beauty stop</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+      <link rel="stylesheet" href="css/styles.css">
+      <!-- Bootstrap Scripts -->
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+      <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+      <!-- Slider Setup -->
+
+      			<script type="text/javascript">
+      			jQuery(window).load(function(){
+      				jQuery( '#flexslider' ).flexslider({
+      					animation: 'fade',
+      					slideshow: 1,
+      					slideshowSpeed: 4000,
+      					animationSpeed: 600,
+      					pauseOnAction: true,
+      					pauseOnHover: false,
+      					controlNav: true,
+      					directionNav: false,
+      					prevText: 'Previous',
+      					nextText: 'Next',
+      					controlsContainer: 'flexslider'
+      				});
+      			});
+
+            // Create the dropdown base
+$("<select />").appendTo("navbar");
+
+// Create default option "Go to..."
+$("<option />", {
+   "selected": "selected",
+   "value"   : "",
+   "text"    : "Go to..."
+}).appendTo("nav select");
+
+// Populate dropdown with menu items
+$("navbar a").each(function() {
+ var el = $(this);
+ $("<option />", {
+     "value"   : el.attr("href"),
+     "text"    : el.text()
+ }).appendTo("navbar select");
+});
+
+$("navbar select").change(function() {
+  window.location = $(this).find("option:selected").val();
+});
+
+      			</script>
+      			<!-- /Slider Setup -->
+
+
+    <script>
+    window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+
+</script>
+     <style>
+     body {margin:0;}
+
+     .navbar {
+       overflow: hidden;
+       background-color: #131422;
+       position: fixed;
+       top: 0;
+       width: 100%;
+       z-index:1000; /* just random high value for z-index will keep it on top */
+     }
+
+     .navbar a {
+       float: left;
+       display: block;
+       color: #f2f2f2;
+       text-align: center;
+       padding: 14px 16px;
+       text-decoration: none;
+       font-size: 17px;
+       z-index:1000; /* just random high value for z-index will keep it on top */
+     }
+
+     .navbar a:hover {
+       background: #ddd;
+       color: black;
+     }
+
+     select {
+        width: 150px;
+        margin: 10px;
+    }
+</style>
+</head>
+     <body>
+       <!--navigation bar -->
+     <div class="colored-section" id="navbar">
+         <nav class="navbar navbar-expand-sm #131422 navbar-dark">
+             <div class="navbar-header">
+               <a class="navbar-brand" href="index.html" >IRAA</a>
+             </div>
+             <ul class="nav navbar-nav">
+               <li class="active"><a href="index.html">Home</a></li>
+               <li><a href="products.html">Products</a></li>
+               <li><a href="service.html">Services</a></li>
+               <li><a href="jewellery.html">Jewelery</a></li>
+               <!--<li><a href="#">Blog </a></li>-->
+               <li><a href="reachUs.html">Reach Us</a></li>
+             </ul>
+
+             <select name="forma" onchange="window.location.href=this.value">
+               <option value="" selected="selected">MENU</option>
+
+                <option value="index.html">Home</option>
+                <option value="products.html">Products</option>
+                <option value="service.html">Services</option>
+                <option value="jewellery.html">Jewelery</option>
+              <!--  <option value="/">Blogs</option> -->
+                <option value="reachUs.html">Reach Us</option>
+             </select>
+         </nav>
+
+     </div>
+
+
+
+  <!-- The slideshow -->
+
+  <div id="flexslider" class="flexslider has-pagination" style="height:auto;">
+
+      <a href="" title="Pioneers in Make up Careers"><img class="image" src="images/wallpic.jpg" alt="Pioneers in Make up Careers"  /></a>
+      <div class="centered-text">
+      <a href="http://www.zorainsstudio.com/zorains-academy/"  title="Pioneers in Make up Careers">ONE STOP FOR FAMILY MAKEUP AND GROOMING </a>
+    </div>
+
+      </div>
+
+<div class="section-color ">
+  <div class="container-fluid welcome-text">
+  <h3 class="studio">WELCOME TO IRAA'S STUDIO</h3><br><br>
+<p style="color: white">Hello &amp; welcome to India’s first fully digitally-equipped Make up &amp; Hair Training Academy. Founded in 2007 by the award-winning make up artist Zorain Khaleeli, Zorain’s Studio &amp; Academy is the biggest makeup studio and academy in India, bringing the best of both worlds in the professional beauty domain – make up services &amp; training under a single brand. </p>
+<a class="wplightbox" href="https://www.youtube.com/watch?v=gn9cQkII6k8" data-width="960" data-height="540"><i class="fa fa-play-circle"  style="font-size:60px;color:red"></i><span></span><h3>Show Reel</h3></a>
+</div>
+</div>
+
+
+//services
+<div id="flexslider" class="flexslider has-pagination">
+<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
+<div class="container">
+
+<div class="row">
+
+<div class="  col-sm-12 col-md-6 col-lg-6 alpha">
+
+
+<header class="section-header">
+<h3>STAY BEAUTIFUL<span>DISCOVER BEAUTY</span></h3>
+</header>
+<p>Zorain’s Studio services include make up and hairstyling for weddings ( pre-wedding bridal and bridal), special occasions, editorials, back-stage events at the studio as well as at the venue and television.</p>
+
+
+
+<p class="has-text-align-center"><a href="http://www.zorainsstudio.com/beauty-services/">SERVICES</a></p>
+
+
+</div>
+
+<div class="  col-sm-12 col-md-6 col-lg-6 omega">
+
+<div class="wp-block-image shadow">
+<figure class="aligncenter size-full"><a href="http://www.zorainsstudio.com/beauty-services/"><img decoding="async" loading="lazy" width="500" height="500" style="background-size: cover;" src="images/Makeup-Hair-Services-from-IRAA-Studio.jpg" alt="" class="wp-image-773" srcset="images/Makeup-Hair-Services-from-IRAA-Studio.jpg 500w, images/11/Makeup-Hair-Services-from-IRAA-Studio-300x300.jpg 300w, images/Makeup-Hair-Services-from-IRAA-Studio-150x150.jpg 150w, images/Makeup-Hair-Services-from-IRAA-Studio-80x80.jpg 80w" sizes="(max-width: 500px) 100vw, 500px" /></a></figure></div>
+
+</div>
+
+</div>
+
+</div>
+</div>
+//Rent Jewelery
+
+<header class="section-header">
+<h3>RENT JEWELRY<span>RENT PREMIUM JEWELRY</span></h3>
+</header>
+
+<div class="container">
+
+<div class="row">
+
+<div class="  col-sm-12 col-md-6 col-lg-6 alpha">
+
+
+<p>Zorain Jewellery now allows you to have the most ambitious Jewellery budget you can ever have and experiencing it, at a fraction of the cost ! With the most exhaustive and entrancing range of jewellery in the city available on rent, you can now consider even the most expensive jewellery that you had on your wishlist, a click away.</p>
+
+<p> Ideal for shopaholics and connoisseurs on a budget, go ahead and flaunt your bling like you wanted to, and watch jaws dropping at your special event. </p> <a href="https://www.instagram.com/zorainsjewellery/" class="home-links">CHECK IT OUT</a>
+
+
+</div>
+
+<div class="  col-sm-12 col-md-6 col-lg-6 omega">
+
+
+<figure class="wp-block-image shadow"><a href="http://www.zorainsstudio.com/zorains-jewellery-on-rent/"><img decoding="async" loading="lazy" width="525" height="418" src="images/Jewelry-on-Rent-in-IRRA.jpg" alt="Jewelry on rent in Bengaluru" class="wp-image-540" srcset="images/Jewelry-on-Rent-in-IRRA.jpg 525w, images/Jewelry-on-Rent-in-IRRA-300x239.jpg 300w" sizes="(max-width: 525px) 100vw, 525px" /></a></figure>
+
+
+   </div>
+
+   </div>
+
+   </div>
+
+
+
+
+
+
+   <!--Footer-->
+   <div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
+
+   <footer id="footer">
+		<div id="footer-top" class="container">
+						<div id="footer-widgets" class="row footer-3">
+
+											<div class="block footer-widget-1 col-12 col-lg-4 col-md-6 col-sm-12">
+								<div id="custom_html-2" class="widget_text widget widget_custom_html"><h4 class="widget-title"><span>Reach Us</span></h4><div class="textwidget custom-html-widget"><div class="row">
+	<div class="col-md-12">
+			<p>
+			<span class="loc">
+	<i class='fas fa-map-marker-alt' style='font-size:20px;color:white'></i>
+  IRAA Studio,
+Thammaiah Hospital Circle,
+Near MG Stadium,
+Tumkur - 572103
+			</span>
+			</p>
+	</div>
+
+	<div class="col-md-12">
+
+		<p>
+		<span >	<i class='fas fa-phone' style='font-size:20px;color:white'></i>+91-8884111454 / +91-8892614965</span>
+		</p>
+	</div>
+	<div class="col-md-12">
+		<p>
+      	<a href="mailto:contact@zorainsstudio.com"><i class='fas fa-envelope me-3' style='font-size:20px;color:white;'></i>contact@iraasaloonstudio.com</a>
+
+		</p>
+	</div>
+</div></div></div>"
+							</div>
+<div class="block footer-widget-2 col-12 col-lg-4 col-md-6 col-sm-12">
+		<div id="text-2" class="widget widget_text"><h4 class="widget-title"><span>Quick Contact</span></h4>
+      <div class="textwidget">
+        <p><strong>Services</strong> &#8211; 8884111454 / 8892614965 </p>
+        <p><strong>Services</strong> &#8211; 8884111454 / 8892614965 </p>
+    </div>
+		</div>
+</div>
+
+											<div class="block footer-widget-3 col-12 col-lg-4 col-md-6 col-sm-12">
+								<div id="widget-socialbar-2" class="widget widget_socialbar"><h4 class="widget-title"><span>We are Social </span></h4>
+                  <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i style="font-size:30px" class="fab fa-facebook-f"></i
+        ></a>
+
+        <!-- Twitter -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i style="font-size:30px" class="fab fa-twitter"></i
+        ></a>
+        <!-- instagram -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i style="font-size:30px" class="fab fa-instagram"></i
+        ></a>
+        <!-- youtube -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i style="font-size:30px" class="fab fa-youtube"></i
+        ></a>
+        <!-- pinterest -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i style="font-size:30px" class="fab fa-pinterest"></i
+        ></a>
+        </div>
+
+							</div>
+							</div><!--/#footer-widgets-->
+
+		</div>
+		<div id="footer-bottom"  class="container">
+				<div id="copyright" class="text-center p-3">
+					<p>© 2023 IRRA Studio. All Rights Reserved.</p>				</div>
+
+
+		</div>
+	</footer><!-- /#footer  -->
+
+
+
+  </body>
+</html>

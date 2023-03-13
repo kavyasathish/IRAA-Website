@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>IRAA Beauty stop</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+      <link rel="stylesheet" href="css/styles.css">
+      <<script src="beauty.js">
+
+      </script>
+      <!-- Bootstrap Scripts -->
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+      <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      <!-- Slider Setup -->
+
+      <style type="text/css" >
+
+      body {margin:0;}
+
+      .navbar {
+        overflow: hidden;
+        background-color: #131422;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index:1000; /* just random high value for z-index will keep it on top */
+      }
+
+      .navbar a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        z-index:1000; /* just random high value for z-index will keep it on top */
+      }
+
+      .navbar a:hover {
+        background: #ddd;
+        color: black;
+      }
+
+      select {
+         width: 150px;
+         margin: 10px;
+         color: black;
+     }
+ </style>
+      			<script type="text/javascript">
+      			jQuery(window).load(function(){
+      				jQuery( '#flexslider' ).flexslider({
+      					animation: 'fade',
+      					slideshow: 1,
+      					slideshowSpeed: 4000,
+      					animationSpeed: 600,
+      					pauseOnAction: true,
+      					pauseOnHover: false,
+      					controlNav: true,
+      					directionNav: false,
+      					prevText: 'Previous',
+      					nextText: 'Next',
+      					controlsContainer: 'flexslider'
+      				});
+      			});
+
+            // Create the dropdown base
+$("<select />").appendTo("navbar");
+
+// Create default option "Go to..."
+$("<option />", {
+   "selected": "selected",
+   "value"   : "",
+   "text"    : "Go to..."
+}).appendTo("nav select");
+
+// Populate dropdown with menu items
+$("navbar a").each(function() {
+ var el = $(this);
+ $("<option />", {
+     "value"   : el.attr("href"),
+     "text"    : el.text()
+ }).appendTo("navbar select");
+});
+
+$("navbar select").change(function() {
+  window.location = $(this).find("option:selected").val();
+});
+
+//tabs functioning
+$('.imgContent').hide();
+
+$('.dataToggle').click(function() {
+
+  $('.imgContent').hide();
+  $("#" + $(this).data("img")).show();
+});
+
+
+      			</script>
+      			<!-- /Slider Setup -->
+
+
+   <script>
+    window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+
+
+</script>
+
+</head>
+     <body>
+       <!--navigation bar -->
+     <div class="colored-section" id="navbar">
+       <nav class="navbar navbar-expand-sm #131422 navbar-dark">
+           <div class="navbar-header">
+             <a class="navbar-brand" href="index.html" >IRAA</a>
+           </div>
+           <ul class="nav navbar-nav">
+             <li class="active"><a href="index.html">Home</a></li>
+             <li><a href="products.html">Products</a></li>
+             <li><a href="service.html">Services</a></li>
+             <li><a href="jewellery.html">Jewelery</a></li>
+            <!-- <li><a href="#">Blog </a></li> -->
+             <li><a href="reachUs.html">Reach Us</a></li>
+           </ul>
+
+           <select name="forma" onchange="window.location.href=this.value">
+             <option value="" selected="selected">MENU</option>
+
+              <option value="index.html">Home</option>
+              <option value="products.html">Products</option>
+              <option value="service.html">Services</option>
+              <option value="jewellery.html">Jewelery</option>
+                <!--  <option value="/">Blogs</option> -->
+              <option value="reachUs.html">Reach Us</option>
+           </select>
+       </nav>
+
+     </div>
+
+          <div style="height:50px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+     <div id="body-content">
+     		<div class="hero-container page">
+     	<div class="hero-image">
+     		</div>
+     	<div class="hero-desc">
+     		<div class="container">
+     			<div class="row">
+     				<div class="col-12"><header class="entry-header title-wrapper"><h1 class="entry-title"><a href="https://www.zorainsstudio.com/pac-products-at-zorains-studio/" rel="bookmark" title="Products at Zorain&#8217;s Studio">Products at IRRA Studio</a></h1><div class="clear"></div></header></div>				<div class="col-12">
+
+     					<p></p>
+
+     				</div>
+     			</div>
+     		</div>
+     	</div>
+     </div>
+
+     <div class="container">
+     			<main id="main">
+     			<div class="row">
+
+
+     			<div class="col-12 col-lg-12">
+
+     	<article id="post-329" class="post post-329 page type-page status-publish hentry">
+
+
+     		<section class="entry-contents"><div class="wp-block-image">
+     <figure class="aligncenter size-full"><img decoding="async" width="1180" height="686" src="images/productsStore/IRAA-Product-store.jpg" alt="Zorain Beauty Products Koramangala" class="wp-image-1348" srcset="images/productsStore/IRAA-Product-store.jpg 1180w, images/productsStore/IRAA-Product-store.jpg 300w, images/productsStore/IRAA-Product-store.jpg 1024w, images/productsStore/IRAA-Product-store.jpg 768w" sizes="(max-width: 1180px) 100vw, 1180px" /></figure></div>
+
+
+     <p>IRAA&#8217;s Studio houses the unique and extensive range of International Cosmetics that covers all your beauty-enhancing requirements for your Face, Eyes, Lips, Nails &amp; Skin, including beauty accessories and beauty kits for Makeup and Nails. </p>
+
+     <div style="height:50px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+     <header class="section-header">
+     <h3>Beauty Products<span>Beauty Products Gallery</span></h3>
+     </header><br>
+
+
+
+     <div class="container">
+       <ul class="nav nav-tabs">
+         <li class="active"><a data-toggle="tab" href="#home">Products Store</a></li>
+         <li><a data-toggle="tab" href="#menu1">Hair Extension</a></li>
+         <li><a data-toggle="tab" href="#menu2">Hair Accessories</a></li>
+         <li><a data-toggle="tab" href="#menu3">Hair Sprays</a></li>
+         <li><a data-toggle="tab" href="#menu4">PAC</a></li>
+         <li><a data-toggle="tab" href="#menu5">Hair Tools</a></li>
+       </ul>
+
+       <div class="tab-content">
+         <div id="home" class="tab-pane fade in active">
+           <h3>HOME</h3>
+           <figure class="aligncenter size-full"><img decoding="async" width="1180" height="686" src="images/productsStore/IRAA-Product-store.jpg" alt="Zorain Beauty Products Koramangala" class="wp-image-1348" srcset="images/productsStore/IRAA-Product-store.jpg 1180w, images/productsStore/IRAA-Product-store.jpg 300w, images/productsStore/IRAA-Product-store.jpg 1024w, images/productsStore/IRAA-Product-store.jpg 768w" sizes="(max-width: 1180px) 100vw, 1180px" /></figure>
+         </div>
+
+
+         <div id="menu1" class="tab-pane fade">
+           <div class="row">
+             <div class="column">
+               <img id="myImg1" src="images/productsStore/HairExtension/thumbs_IMG-20190319-WA0032.jpg" alt="Extension" style="width:100%;max-width:300px" onclick="modelImages(this)">
+             </div>
+            <div class="column">
+                  <img id="myImg2" src="images/productsStore/HairExtension/thumbs_Keya-111-F427.jpg" alt="Extension" style="width:100%;max-width:300px" onclick="modelImages(this)" >
+                </div>
+                <div class="column">
+                  <img id="myImg3" src="images/productsStore/HairExtension/thumbs_Keya-EMI-912-F427.jpg" alt="Extension" style="width:100%;max-width:300px" onclick="modelImages(this)" >
+                </div>
+                <div class="column">
+                  <img id="myImg4" src="images/productsStore/HairExtension/thumbs_Keya-VM-1-4.jpg" alt="Extension" style="width:100%;max-width:300px" onclick="modelImages(this)" >
+                </div>
+           </div>
+         </div>
+         <div id="menu2" class="tab-pane fade">
+           <div class="row">
+             <div class="column">
+               <img id="myImg1" src="images/productsStore/HairAccessories/thumbs_Big-Orange-Clove-Floral-Accessory.jpg" alt="Accessories" style="width:100%;max-width:300px" onclick="modelImages(this)">
+             </div>
+            <div class="column">
+                  <img id="myImg2" src="images/productsStore/HairAccessories/thumbs_Flower-Accessories-Zorains-Studio-Store-3.jpg" alt="Accessories" style="width:100%;max-width:300px" onclick="modelImages(this)" >
+                </div>
+                <div class="column">
+                  <img id="myImg3" src="images/productsStore/HairAccessories/thumbs_Pink-White-Floral-Bun-Hair-Accessory.jpg" alt="Accessories" style="width:100%;max-width:300px" onclick="modelImages(this)" >
+                </div>
+                <div class="column">
+                  <img id="myImg4" src="images/productsStore/HairAccessories/thumbs_White-Rainbow-Small-Flowers.jpg" alt="Accessories" style="width:100%;max-width:300px" onclick="modelImages(this)" >
+                </div>
+           </div>
+           <div class="row">
+             <div class="column">
+               <img id="myImg1" src="images/productsStore/HairAccessories/thumbs_Small-White-Sunflower-Hair-Accessory.jpg" alt="Accessories" style="width:100%;max-width:300px" onclick="modelImages(this)">
+             </div>
+            <div class="column">
+                  <img id="myImg2" src="images/productsStore/HairAccessories/thumbs_Red-Button-Roses.jpg" alt="Accessories" style="width:100%;max-width:300px" onclick="modelImages(this)" >
+                </div>
+                <div class="column">
+                  <img id="myImg3" src="images/productsStore/HairAccessories/thumbs_Flower-Accessories-Zorains-Studio-Store-7.jpg" alt="Accessories" style="width:100%;max-width:300px" onclick="modelImages(this)" >
+                </div>
+                <div class="column">
+                  <img id="myImg4" src="images/productsStore/HairAccessories/thumbs_Flower-Accessories-Zorains-Studio-Store-6.jpg" alt="Accessories" style="width:100%;max-width:300px" onclick="modelImages(this)" >
+                </div>
+           </div>
+           <div class="row">
+             <div class="column">
+               <img id="myImg1" src="images/productsStore/HairAccessories/thumbs_Flower-Accessories-Zorains-Studio-Store-5.jpg" alt="Accessories" style="width:100%;max-width:300px" onclick="modelImages(this)">
+             </div>
+            <div class="column">
+                  <img id="myImg2" src="images/productsStore/HairAccessories/thumbs_Flower-Accessories-Zorains-Studio-Store-1.jpg" alt="Accessories" style="width:100%;max-width:300px" onclick="modelImages(this)" >
+                </div>
+                <div class="column">
+                  <img id="myImg3" src="images/productsStore/HairAccessories/thumbs_Colorful-Small-Baby-Breath-Hair-Accessory.jpg" alt="Accessories" style="width:100%;max-width:300px" onclick="modelImages(this)" >
+                </div>
+                <div class="column">
+                  <img id="myImg4" src="images/productsStore/HairAccessories/thumbs_Button-Rose-Bun-Hair-Assessory.jpg" alt="Accessories" style="width:100%;max-width:300px" onclick="modelImages(this)" >
+                </div>
+           </div>
+
+         </div>
+         <div id="menu3" class="tab-pane fade">
+           <div class="row">
+             <div class="column">
+               <img id="myImg1" src="images/productsStore/HairSprays/thumbs_B-Blunt-Beach-Please-Dry-Shampoo.jpg" alt="HairSprays" style="width:100%;max-width:300px" onclick="modelImages(this)">
+             </div>
+            <div class="column">
+                  <img id="myImg2" src="images/productsStore/HairSprays/thumbs_Schwarzkopf-Moisture-Kick-Spray.jpg" alt="HairSprays" style="width:100%;max-width:300px" onclick="modelImages(this)" >
+                </div>
+                <div class="column">
+                  <img id="myImg3" src="images/productsStore/HairSprays/thumbs_Schwarzkopf-Osis-Shine-Spray.jpg" alt="HairSprays" style="width:100%;max-width:300px" onclick="modelImages(this)" >
+                </div>
+                <div class="column">
+                  <img id="myImg4" src="images/productsStore/HairSprays/thumbs_Schwarzkopf-Strong-Hold-Hairspray.jpg" alt="HairSprays" style="width:100%;max-width:300px" onclick="modelImages(this)" >
+                </div>
+           </div>
+         </div>
+         <div id="menu4" class="tab-pane fade">
+           <div class="row">
+             <div class="column">
+               <img id="myImg1" src="images/productsStore/PAC/thumbs_2-10-colour-backed-eyeshadow-pac-original-imafch7xh8xmkkhr.jpeg" alt="PAC" style="width:100%;max-width:300px" onclick="modelImages(this)">
+             </div>
+            <div class="column">
+                  <img id="myImg2" src="images/productsStore/PAC/thumbs_59fcdf0nypac00000941m1.jpg" alt="PAC" style="width:100%;max-width:300px" onclick="modelImages(this)" >
+                </div>
+                <div class="column">
+                  <img id="myImg3" src="images/productsStore/PAC/thumbs_61d6VGtjbDL._SL1500_.jpg" alt="PAC" style="width:100%;max-width:300px" onclick="modelImages(this)" >
+                </div>
+                <div class="column">
+                  <img id="myImg4" src="images/productsStore/PAC/thumbs_71h03mK7tyL._SL1500_.jpg" alt="PAC" style="width:100%;max-width:300px" onclick="modelImages(this)" >
+                </div>
+           </div>
+           <div class="row">
+             <div class="column">
+               <img id="myImg1" src="images/productsStore/PAC/thumbs_1564396679_mob-category-brand-page-781-x-440.jpg" alt="PAC" style="width:100%;max-width:300px" onclick="modelImages(this)">
+             </div>
+            <div class="column">
+                  <img id="myImg2" src="images/productsStore/PAC/thumbs_fcco_takecov_nypac00001729-51_2__1_3.jpg" alt="PAC" style="width:100%;max-width:300px" onclick="modelImages(this)" >
+                </div>
+                <div class="column">
+                  <img id="myImg3" src="images/productsStore/PAC/thumbs_FCCO_TAKECOV.other4_.jpg" alt="PAC" style="width:100%;max-width:300px" onclick="modelImages(this)" >
+                </div>
+                <div class="column">
+                  <img id="myImg4" src="images/productsStore/PAC/thumbs_unnamed-3.jpg" alt="PAC" style="width:100%;max-width:300px" onclick="modelImages(this)" >
+                </div>
+           </div>
+         </div>
+         <div id="menu5" class="tab-pane fade">
+           <div class="row">
+             <div class="column">
+               <img id="myImg1" src="images/productsStore/HairTools/thumbs_01-ikonic-professional-hair-dryer-pro-2200-hd-2200-pixies-chennai.jpg" alt="HairTools" style="width:100%;max-width:300px" onclick="modelImages(this)">
+             </div>
+            <div class="column">
+                  <img id="myImg2" src="images/productsStore/HairTools/thumbs_21e751fe2ad18803f280d9be81cf4d19.jpg" alt="HairTools" style="width:100%;max-width:300px" onclick="modelImages(this)" >
+                </div>
+                <div class="column">
+                  <img id="myImg3" src="images/productsStore/HairTools/thumbs_51ZtPnT-O5L._SL1100_.jpg" alt="HairTools" style="width:100%;max-width:300px" onclick="modelImages(this)" >
+                </div>
+                <div class="column">
+                  <img id="myImg4" src="images/productsStore/HairTools/thumbs_71pc8VXniAL._SL1500_.jpg" alt="HairTools" style="width:100%;max-width:300px" onclick="modelImages(this)" >
+                </div>
+           </div>
+         </div>
+
+
+
+         <!-- Trigger the Modal -->
+
+
+         </div>
+
+       </div>
+
+
+       <div id="myModal" class="modal">
+
+         <!-- The Close Button -->
+         <span class="closeBut">&times;</span>
+
+         <!-- Modal Content (The Image) -->
+         <img class="modal-content" id="img01">
+
+         <!-- Modal Caption (Image Text) -->
+         <div id="caption"></div>
+       </div>
+
+
+
+
+
+   </section>
+
+      </article><!-- end article -->
+
+
+     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   			</div>
+
+</main>
+   			</div>
+
+
+
+   	</div>
+
+
+
+
+
+
+   <!--Footer -->
+
+   <footer id="footer">
+		<div id="footer-top" class="container">
+						<div id="footer-widgets" class="row footer-3">
+
+											<div class="block footer-widget-1 col-12 col-lg-4 col-md-6 col-sm-12">
+								<div id="custom_html-2" class="widget_text widget widget_custom_html"><h4 class="widget-title"><span>Reach Us</span></h4><div class="textwidget custom-html-widget"><div class="row">
+	<div class="col-md-12">
+			<p>
+			<span class="loc">
+	<i class='fas fa-map-marker-alt' style='font-size:20px;color:white'></i>
+  IRAA Studio,
+Thammaiah Hospital Circle,
+Near MG Stadium,
+Tumkur - 572103
+			</span>
+			</p>
+	</div>
+
+	<div class="col-md-12">
+
+		<p>
+		<span >	<i class='fas fa-phone' style='font-size:20px;color:white'></i>+91-8884111454 / +91-8892614965</span>
+		</p>
+	</div>
+	<div class="col-md-12">
+		<p>
+      	<a href="mailto:contact@IRAAsstudio.com"><i class='fas fa-envelope me-3' style='font-size:20px;color:white;'></i>contact@iraasaloonstudio.com</a>
+
+		</p>
+	</div>
+</div></div></div>"
+							</div>
+<div class="block footer-widget-2 col-12 col-lg-4 col-md-6 col-sm-12">
+		<div id="text-2" class="widget widget_text"><h4 class="widget-title"><span>Quick Contact</span></h4>
+      <div class="textwidget">
+        <p><strong>Services</strong> &#8211; 8884111454 / 8892614965 </p>
+        <p><strong>Services</strong> &#8211; 8884111454 / 8892614965 </p>
+    </div>
+		</div>
+</div>
+
+											<div class="block footer-widget-3 col-12 col-lg-4 col-md-6 col-sm-12">
+								<div id="widget-socialbar-2" class="widget widget_socialbar"><h4 class="widget-title"><span>We are Social </span></h4>
+                  <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i style="font-size:30px" class="fab fa-facebook-f"></i
+        ></a>
+
+        <!-- Twitter -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i style="font-size:30px" class="fab fa-twitter"></i
+        ></a>
+        <!-- instagram -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i style="font-size:30px" class="fab fa-instagram"></i
+        ></a>
+        <!-- youtube -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i style="font-size:30px" class="fab fa-youtube"></i
+        ></a>
+        <!-- pinterest -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i style="font-size:30px" class="fab fa-pinterest"></i
+        ></a>
+        </div>
+
+							</div>
+							</div><!--/#footer-widgets-->
+
+		</div>
+		<div id="footer-bottom"  class="container">
+				<div id="copyright" class="text-center p-3">
+					<p>© 2023 IRRA Studio. All Rights Reserved.</p>				</div>
+
+
+		</div>
+	</footer><!-- /#footer  -->
+
+  </body>
+</html>

@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>IRAA Beauty stop</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+      <link rel="stylesheet" href="css/styles.css">
+
+      <!-- Bootstrap Scripts -->
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+      <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+
+<!--<script type="text/javascript">
+function sendMail() {
+  var from = document.getElementById("email").value;
+  alert("from" + message);
+
+  Email.send({
+  //  alert("fffff");
+    Host: "smtp.gmail.com",
+    Username: "kavyasathish.b@gmail.com",
+    Password: "Sath@9916028854",
+    To: 'kavyasathish.b@gmail.com',
+    From: from,
+    Subject: "Sending Email using javascript",
+    Body: "Well that was easy!!",
+  })
+    .then(function (message) {
+      alert("mail sent successfully")
+    });
+}
+</script> -->
+      <!-- Slider Setup -->
+
+      <style type="text/css" >
+
+      body {margin:0;}
+
+      .navbar {
+        overflow: hidden;
+        background-color: #131422;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index:1000; /* just random high value for z-index will keep it on top */
+      }
+
+      .navbar a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        z-index:1000; /* just random high value for z-index will keep it on top */
+      }
+
+      .navbar a:hover {
+        background: #ddd;
+        color: black;
+      }
+
+      select {
+         width: 150px;
+         margin: 10px;
+         color: black;
+     }
+ </style>
+      			<script type="text/javascript">
+      	/*		jQuery(window).load(function(){
+      				jQuery( '#flexslider' ).flexslider({
+      					animation: 'fade',
+      					slideshow: 1,
+      					slideshowSpeed: 4000,
+      					animationSpeed: 600,
+      					pauseOnAction: true,
+      					pauseOnHover: false,
+      					controlNav: true,
+      					directionNav: false,
+      					prevText: 'Previous',
+      					nextText: 'Next',
+      					controlsContainer: 'flexslider'
+      				});
+      			}); */
+
+            // Create the dropdown base
+$("<select />").appendTo("navbar");
+
+// Create default option "Go to..."
+$("<option />", {
+   "selected": "selected",
+   "value"   : "",
+   "text"    : "Go to..."
+}).appendTo("nav select");
+
+// Populate dropdown with menu items
+$("navbar a").each(function() {
+ var el = $(this);
+ $("<option />", {
+     "value"   : el.attr("href"),
+     "text"    : el.text()
+ }).appendTo("navbar select");
+});
+
+$("navbar select").change(function() {
+  window.location = $(this).find("option:selected").val();
+});
+
+//tabs functioning
+$('.imgContent').hide();
+
+$('.dataToggle').click(function() {
+
+  $('.imgContent').hide();
+  $("#" + $(this).data("img")).show();
+});
+
+
+      			</script>
+      			<!-- /Slider Setup -->
+
+
+  <!--
+    window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+-->
+
+
+</head>
+<div style="height:50px" aria-hidden="true" class="wp-block-spacer"></div>
+    <div style="height:50px" aria-hidden="true" class="wp-block-spacer"></div>
+     <body>
+       <!--navigation bar -->
+     <div class="colored-section" id="navbar">
+       <nav class="navbar navbar-expand-sm #131422 navbar-dark">
+           <div class="navbar-header">
+             <a class="navbar-brand" href="index.html" >IRAA</a>
+           </div>
+           <ul class="nav navbar-nav">
+             <li class="active"><a href="index.html">Home</a></li>
+             <li><a href="products.html">Products</a></li>
+             <li><a href="service.html">Services</a></li>
+             <li><a href="jewellery.html">Jewelery</a></li>
+            <!-- <li><a href="#">Blog </a></li> -->
+             <li><a href="reachUs.html">Reach Us</a></li>
+           </ul>
+
+           <select name="forma" onchange="window.location.href=this.value">
+             <option value="" selected="selected">MENU</option>
+
+              <option value="index.html">Home</option>
+              <option value="products.html">Products</option>
+              <option value="service.html">Services</option>
+              <option value="jewellery.html">Jewelery</option>
+                <!--  <option value="/">Blogs</option> -->
+              <option value="reachUs.html">Reach Us</option>
+           </select>
+       </nav>
+
+     </div>
+
+          <div style="height:50px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+     <div id="body-content">
+    <!-- 		<div class="hero-container page">
+     	<div class="hero-image">
+     		</div>
+     	<div class="hero-desc">
+     		<div class="container">
+     			<div class="row">
+     				<div class="col-12"><header class="entry-header title-wrapper"><h1 class="entry-title"><a href="https://www.zorainsstudio.com/pac-products-at-zorains-studio/" rel="bookmark" title="Products at Zorain&#8217;s Studio">Reach Us</a></h1><div class="clear"></div></header></div>				<div class="col-12">
+     				</div>
+     			</div>
+     		</div>
+     	</div>
+    </div> -->
+
+
+     <div class="container">
+     			<main id="main">
+     			<div class="row">
+
+
+
+            <div class="col-12 col-lg-12">
+
+              <!--Section: Contact v.2-->
+
+
+
+          <!--Grid column-->
+
+                    <h2 class="reachUs">We are at</h2>
+
+                    <p>IRAA Studio,<br />
+                      Thammaiah Hospital Circle,<br />
+                      Near MG Stadium,
+                      Tumkur - 572103</p>
+                      <h2 class="reachUs">Say Hello</h2><br>
+                      <p>  <p><strong>Services</strong> &#8211; 8884111454 / 8892614965 </p> <br>
+                        <p><strong>Services</strong> &#8211; 8884111454 / 8892614965 </p>
+
+          <!--Grid column-->
+
+          <!--<form id="contact_form" onsubmit="sendMail(event)" method="POST" enctype="multipart/form-data"> -->
+      <!--    <form id="contact_form"  onsubmit="sendEmail(); reset(); return false">
+            <div class="row">
+              <label class="required" for="name">Your name:</label><br />
+              <input id="name" class="input" name="name" type="text" value="" size="30" /><br />
+              <span id="name_validation" class="error_message"></span>
+            </div>
+            <div class="row">
+              <label class="required" for="email">Your email:</label><br />
+              <input id="email" class="input" name="email" type="text" value="" size="30" /><br />
+              <span id="email_validation" class="error_message"></span>
+            </div>
+            <div class="row">
+              <label class="required" for="number">Your number:</label><br />
+              <input id="number" class="input" name="number" type="tel" value="" size="30" /><br />
+              <span id="number_validation" class="error_message"></span>
+            </div>
+            <div class="row">
+              <label class="required" for="message">Your message:</label><br />
+              <textarea id="message" class="input" style="font-size:20px;color:black;" name="message" rows="7" cols="60"></textarea><br />
+              <span id="message_validation" class="error_message"></span>
+            </div>
+            <button id="submit_button" type="submit"> Send Email </button>
+          </form> -->
+
+  <!--Section: Contact v.2-->
+
+
+
+
+
+   			</div>
+
+</main>
+   			</div>
+
+</div>
+
+   	</div>
+
+    <!--
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+try{
+function sendEmail(){
+    Email.send({
+      Host : "smtp.gmail.com",
+      Username : "kavyasathish.b@gmail.com",
+      Password : "Sath@9916028854",
+      To : 'sathisha.iitg@gmail.com',
+      From : document.getElementById("email").value,
+      Subject : "This is the subject",
+      Body : "And this is the body"
+
+    }).then(
+      message => alert(message)
+    );
+  }
+}
+catch(err){
+  alert(err.message);
+}
+</script>
+-->
+
+    <div style="height:50px" aria-hidden="true" class="wp-block-spacer"></div>
+        <div style="height:50px" aria-hidden="true" class="wp-block-spacer"></div>
+
+   <!--Footer -->
+
+   <footer id="footer">
+		<div id="footer-top" class="container">
+						<div id="footer-widgets" class="row footer-3">
+
+											<div class="block footer-widget-1 col-12 col-lg-4 col-md-6 col-sm-12">
+								<div id="custom_html-2" class="widget_text widget widget_custom_html"><h4 class="widget-title"><span>Reach Us</span></h4><div class="textwidget custom-html-widget"><div class="row">
+	<div class="col-md-12">
+			<p>
+			<span class="loc">
+	<i class='fas fa-map-marker-alt' style='font-size:20px;color:white'></i>
+  IRAA Studio,
+Thammaiah Hospital Circle,
+Near MG Stadium,
+Tumkur - 572103
+			</span>
+			</p>
+	</div>
+
+	<div class="col-md-12">
+
+		<p>
+		<span >	<i class='fas fa-phone' style='font-size:20px;color:white'></i>+91-8884111454 / +91-8892614965</span>
+		</p>
+	</div>
+	<div class="col-md-12">
+		<p>
+      	<a href="mailto:contact@IRAAsstudio.com"><i class='fas fa-envelope me-3' style='font-size:20px;color:white;'></i>contact@iraasaloonstudio.com</a>
+
+		</p>
+	</div>
+</div></div></div>"
+							</div>
+<div class="block footer-widget-2 col-12 col-lg-4 col-md-6 col-sm-12">
+		<div id="text-2" class="widget widget_text"><h4 class="widget-title"><span>Quick Contact</span></h4>
+      <div class="textwidget">
+        <p><strong>Services</strong> &#8211; 8884111454 / 8892614965 </p>
+        <p><strong>Services</strong> &#8211; 8884111454 / 8892614965 </p>
+    </div>
+		</div>
+</div>
+
+											<div class="block footer-widget-3 col-12 col-lg-4 col-md-6 col-sm-12">
+								<div id="widget-socialbar-2" class="widget widget_socialbar"><h4 class="widget-title"><span>We are Social </span></h4>
+                  <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i style="font-size:30px" class="fab fa-facebook-f"></i
+        ></a>
+
+        <!-- Twitter -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i style="font-size:30px" class="fab fa-twitter"></i
+        ></a>
+        <!-- instagram -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i style="font-size:30px" class="fab fa-instagram"></i
+        ></a>
+        <!-- youtube -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i style="font-size:30px" class="fab fa-youtube"></i
+        ></a>
+        <!-- pinterest -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i style="font-size:30px" class="fab fa-pinterest"></i
+        ></a>
+        </div>
+
+							</div>
+							</div><!--/#footer-widgets-->
+
+		</div>
+		<div id="footer-bottom"  class="container">
+				<div id="copyright" class="text-center p-3">
+					<p>© 2023 IRRA Studio. All Rights Reserved.</p>				</div>
+
+
+		</div>
+	</footer><!-- /#footer  -->
+
+  </body>
+</html>
